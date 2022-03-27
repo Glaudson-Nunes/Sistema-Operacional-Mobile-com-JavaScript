@@ -1,0 +1,759 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:#ccc;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ul{
+    list-style: none;
+}
+.objeto_celular{
+    width: 400px;
+    height: 700px;
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.767);
+    margin: 0 auto;
+    margin-top:10px;
+    border-radius: 35px;
+}
+#tela_config{/* INICIO TELA DE CONFIG */
+    width: 365px;
+    height: 650px;
+    background-color: rgba(20, 19, 19, 0.986);
+    margin: 0 auto;
+    margin-top: 20px;
+    display: block;
+}
+.text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    height: 260px;
+    color: rgba(238, 229, 98, 0.856);
+    text-align: center;
+}
+.tutorial{
+    color: rgb(247, 31, 31);
+}
+.text h2{
+    font-size: 1.2em;
+    font-weight: normal;
+}
+#box_infor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#box_infor p{
+   padding: 10px;
+    width: 68%;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid rgba(204, 204, 204, 0.63);
+    border-radius: 3px;
+    color: white;
+    text-align: center;
+    outline: none;
+    font-size: 1em;
+    overflow-x: hidden;
+}
+#erro{
+    color:red;
+    font-size: 0.6em;
+    margin-top:5px;
+}
+#erro2{
+    color:red;
+    font-size: 0.6em;
+}
+#teclado1{
+    display: flex;
+    margin: 50px;
+    margin-left: 45px;
+    display: none;
+}
+#teclado2{
+    display: grid;
+    grid-template: auto auto auto/auto auto auto auto auto auto auto auto auto;
+    justify-items: center;
+    margin-top:35px;
+    background-color: rgba(204, 204, 204, 0.116);
+    padding: 20px;
+    display: block;
+}
+
+#teclado2 button{
+    width: 30px;
+    padding: 3px;
+    border-radius: 5px;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid rgba(204, 204, 204, 0.555);
+    color: white;
+    font-size: 0.9em;
+    cursor: pointer;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+#teclado1 button{
+    width: 35px;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid rgba(204, 204, 204, 0.555);
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+#teclado1 button:hover,#teclado2 button:hover,#teclado3 button:hover, #teclado4 button:hover{
+    background-color:rgba(255, 255, 255, 0.247);
+}
+#teclado3{
+    margin: 50px;
+    margin-left: 45px;
+    display: none;
+}
+#teclado4{
+    display: grid;
+    grid-template: auto auto auto/auto auto auto auto auto auto auto auto auto;
+    justify-items: center;
+    margin-top:35px;
+    background-color: rgba(204, 204, 204, 0.116);
+    padding: 20px;    
+    display: block;
+}
+#teclado3 button{
+    width: 35px;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid rgba(204, 204, 204, 0.555);
+    color: white;
+    font-size: 1em;
+   cursor: pointer;
+}
+#teclado4 button{
+    width: 30px;
+    padding: 3px;
+    border-radius: 5px;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid rgba(204, 204, 204, 0.555);
+    color: white;
+    font-size: 0.9em;
+    cursor: pointer;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+#tela_bloqueio{/* INICIO TELA DE BLOQUEIO */
+    width: 365px;
+    height: 650px;
+    background-image: linear-gradient(120deg, rgb(23, 23, 146), rgb(8, 145, 8));
+    margin: 0 auto;
+    margin-top: 20px;
+    color: white;
+    display: none;
+}
+#icons_primario{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: flex-end;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.74);
+    color: white;
+}
+
+#hora-data{
+    margin-top:-40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+
+#hora-data p{
+    font-size: 4em;
+}
+.Input_senha{
+    margin-top:-50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.senha1{
+    border: 1px solid #ccc;
+    width: 68%;
+    height: 45px;
+    padding: 15px;
+    border-radius: 6px;
+    outline: none;    
+    overflow:hidden;
+}
+#tela_inicial{/* INICIO TELA INICIAL*/
+    
+    width: 365px;
+    height: 650px;
+    background-image: linear-gradient(120deg, rgb(255, 38, 38),rgb(49, 49, 255),rgb(21, 201, 21));
+    margin: 0 auto;
+    margin-top: 20px;
+    color:white;
+    display: none;
+}
+.previsao1{
+    margin-top: 120px;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.previsao2{
+    margin-top: 20px;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.apps{
+    display: grid;
+    grid-template: auto auto / auto auto auto;
+    justify-items: center;
+    gap: 30px;
+    margin-top: 60px;
+}
+.apps img:hover{
+    cursor: pointer;
+}
+.apps img:active{
+    width: 41px;
+}
+.icons_nav1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top:105px;
+}
+.icons_nav6{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+.icons_nav1 img:hover{
+    cursor: pointer;
+}
+.icons_nav1 img:active{
+    padding: 2px;
+}
+.icons_nav6 img:hover{
+    cursor: pointer;
+}
+.icons_nav6 img:active{
+    padding: 2px;
+}
+.h2{
+    font-size: 1.8em;
+    color:rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+    font-weight: normal;
+    background-color: rgb(27, 85, 27);
+    border: none;   
+}
+.h3{
+    font-size: 1.2em;
+    color:rgb(27, 27, 27);
+    text-align: center;
+    font-weight: normal;
+    border-bottom: 0.6px solid #ccc;   
+    padding: 8px;
+}
+#abrir_tela_Configuracoes{/* INICIO ESTILO DAS TELAS QUE VÂO ABRIR/ tela de configuraça e suas variaveis */
+
+    width: 365px;
+    height: 650px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 20px;
+    color:black;
+    display: none;
+}
+#lista_config li{
+    font-size: 1.6em;
+    color:rgb(17, 17, 17);
+    background-color: rgba(128, 128, 128, 0.342);
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    padding:10px;
+    cursor: pointer;
+}
+#lista_config{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 55px;
+    margin-top:30px;
+}
+#tela{
+    width: 365px;
+    height: 650px;
+    background-color: rgba(255, 255, 255, 0.89);
+    margin: 0 auto;
+    margin-top: 20px;
+    color:black;
+    display: none;
+}
+#tema1{
+    width: 45px;
+    height: 80px;
+    background-image: linear-gradient(120deg, rgb(2, 2, 2),rgb(255, 49, 221),rgb(201, 189, 21));
+    cursor: pointer;
+}
+#tema2{
+    width: 45px;
+    height: 80px;
+    background-image: linear-gradient(120deg, rgb(5, 4, 4),rgb(128, 170, 49),rgb(212, 142, 13));
+    cursor: pointer;
+}
+.box1{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.box1 input,.box_bloque input{
+    cursor: pointer;
+}
+.box2{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+#tela_segurança{
+    width: 365px;
+    height: 650px;
+    background-color: rgba(255, 255, 255, 0.89);
+    margin: 0 auto;
+    margin-top: 20px;
+    color:rgb(201, 201, 201);
+    display: none;
+}
+#tela_segurança{
+
+    font-size: 1.1em;
+    color:rgb(61, 59, 59);
+    text-align: center;
+    display: none;
+}
+.box_conteudo{
+    margin-top: 320px;
+}
+#tela_bloqueio2{
+    width: 365px;
+    height: 650px;
+    background-color: rgba(255, 255, 255, 0.89);
+    margin: 0 auto;
+    margin-top: 20px;
+    color:rgb(201, 201, 201);
+    display: none;
+}
+.box_bloque{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    color: black;
+}
+.box_bloque2{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color:black;
+}
+#tema1:active,#tema2:active,#tema3:active,#tema4:active{
+    width: 40px;
+}
+#tema3{
+    width: 45px;
+    height: 80px;
+    background-image: linear-gradient(120deg, rgb(27, 82, 90),rgb(54, 71, 20),rgb(94, 64, 8));
+    cursor: pointer;
+}
+#tema4{
+
+    width: 45px;
+    height: 80px;
+    background-image: linear-gradient(120deg, rgb(9, 12, 12),rgb(95, 45, 22),rgb(27, 5, 85));
+    cursor: pointer;
+}
+
+/* -----------------------------------------------------------------------------------------------------------*/
+#tela_telefone{ /* INICIO ESTILO DAS TELAS QUE VÂO ABRIR/ tela do telefone e suas variaveis */
+    width: 365px;
+    height: 650px;
+    background-color: rgba(12, 8, 240, 0.377);
+    margin: 0 auto;
+    margin-top: 20px;
+    color:black;
+    overflow-y: scroll;
+    display: none;
+}
+#receberCTTs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+#receberCTTs li{
+
+    font-size: 1em;
+    color:white;
+    font-weight: bolder;
+    background-image: url('../imgs/icons/telefone.png');
+    background-repeat: no-repeat;
+    background-size: 22px;
+    padding-left: 30px;
+}
+#salvar{
+    cursor: pointer;
+}
+#box_contatos{
+
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#box_add_contatos{
+    margin: 0 auto;
+    margin-top: 35px;
+    width: 320px;
+    height: 300px;
+    background-color: rgba(204, 204, 204, 0.315);
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+#box_add_contatos input{
+
+    width: 80%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: rgb(204, 204, 204);
+    border-radius: 6px;
+}
+/* ----------------------------------------------------------- */
+#tela_googleMaps{ /* INICIO ESTILO DAS TELAS QUE VÂO ABRIR/ tela do googleMaps e suas variaveis */
+
+    width: 365px;
+    height: 650px;
+    margin: 0 auto;
+    margin-top: 20px;
+    color:white;
+    overflow-y: scroll;
+    background-color: white;
+    display: none;
+}
+
+/* ------------------------------------------------*/
+#tela_Galeria{ /* INICIO ESTILO DAS TELAS QUE VÂO ABRIR/ tela da galeria e suas variaveis */
+
+    width: 365px;
+    height: 650px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.829);
+    display: none;
+}
+.container-fotos{
+
+   display: grid;
+   grid-template: auto auto auto/ auto auto auto;
+   justify-items: center;
+   margin-top: 10px;
+}
+.container-fotos img{
+
+    width: 90px;
+    height: 140px;
+    cursor: pointer;
+}
+
+#img_aberta1,#img_aberta2,#img_aberta3,#img_aberta4,#img_aberta5,#img_aberta6,#img_aberta7,#img_aberta8,#img_aberta9{
+    width: 365px;
+    height: 650px;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: none;
+}
+.seta{
+    position: absolute;
+    top:50px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+#botoes-fotos{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.767);
+    padding: 10px;
+    position: absolute;
+    top:90%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 365px;
+}
+#botoes-fotos li{
+
+    font-size: 1em;
+    padding-left: 20px;
+    cursor: pointer;
+}
+#lixeira1,#lixeira2,#lixeira3,#lixeira4,#lixeira5,#lixeira6,#lixeira7,#lixeira8,#lixeira9{
+
+    background-image: url('../imgs/icons/lixeira-de-reciclagem.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px;
+}
+#add1,#add2,#add3,#add4,#add5,#add6,#add7,#add8,#add9{
+
+    background-image: url('../imgs/icons/celular.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px;
+}
+/* -------------------------------------------------------------*/
+#tela_playerMusic{/* INICIO ESTILO DAS TELAS QUE VÂO ABRIR/ tela de palyermusic e suas variaveis */
+
+    position: relative;
+    width: 365px;
+    height: 495px;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: none;
+}
+/* INICIO ESTILO DO PLAYER DE MSUICA */
+
+.fim{
+
+    padding:5px;
+    margin-left: 170px;
+    color:rgba(255, 255, 255, 0.733);
+}
+
+.inicio{
+    color:rgba(255, 255, 255, 0.733);
+}
+
+.imagen img{
+
+    width: 300px;
+    height: 300px;
+    margin: 6px;
+    padding:5px;
+}
+#controle img{
+    width: 45px;
+    margin: 6px;
+    margin-top:50px;
+    padding:5px;
+    cursor: pointer;
+
+}
+progress{
+    transform: translateY(-40%);
+    cursor: pointer;
+    width: 0%;
+    height: 5px;
+    background-color: wheat;
+}
+
+#controle img:hover{
+    background-color: rgba(128, 128, 128, 0.356);
+    padding:5px;
+    border-radius: 50%;
+}
+.descricao{
+
+    margin: 8px;
+}
+.artista{
+
+    font-size: 0.8em;
+    padding:10px;
+    font-weight: bolder;
+    
+}
+.barra{
+
+    width: 90%;
+    position: relative;
+    height: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.575);
+    border-radius: 5px;
+    display: flex;
+    justify-content:flex-start;
+    margin: 0 auto;
+    padding: 5px;
+}
+#container{
+
+    position: absolute;
+    top:68%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    background-color: rgba(207, 24, 51, 0.904);
+    padding:30px;
+    border-radius: 5px;
+    width: 365px;
+    height: 590px;
+}
+
+#botao-pause{
+
+    display: none;
+}
+
+li{
+
+    display: inline-block;
+    font-size: 0.9em;
+    margin-top: 8px;
+}
+
+/* -----------------------------------------*/
+
+#tela_calculadora{ /* INICIO ESTILO DAS TELAS QUE VÂO ABRIR/ tela da calculadora e suas variaveis */
+
+    width: 365px;
+    height: 645px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: #ccc;
+    display: none;
+}
+
+/* inicio estilo calculadora */
+
+.calculadora{
+
+    position: absolute;
+    top:48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.767);
+    display: inline-block;
+    padding: 20px;
+    width: 310px;
+    height: 390px;
+    
+}
+button{
+
+    padding: 15px;
+    width: 40px;
+    cursor: pointer;
+    margin: 3px;
+    font-size: 1.1em;
+    background-color: rgba(128, 128, 128, 0.568);
+    color: white;
+    border: 1px solid white;
+    margin-top: 20px;
+}
+
+button:hover{
+    background-color:gray;
+}
+
+#texto{
+
+    padding: 10px;
+    color: black;
+    text-align: right;
+    width: 90%;
+    height: 35px;
+    background-color: white;
+    margin: 0 auto;
+    margin-bottom: 7px;
+}
+
+#tela_LOAD{
+
+    width: 365px;
+    height: 645px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color:black;
+    display: none;
+    text-align: center;
+}
+.textA{
+    color: rgb(211, 208, 12);
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.img img{
+
+    padding-top: 120px;
+    animation: rotaçao 2s 1;
+}
+.animaçao{
+
+    animation: rotaçao 2s infinite;
+    border: 6px solid white;
+    border-radius: 50%;
+    border-top-color: blueviolet;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+@keyframes rotaçao {
+
+    to{
+
+        transform: rotate(1turn);
+    }
+}
+iframe{
+
+    width: 365px;
+    height: 450px;
+}

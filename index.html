@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style/estilo.css">
+    <meta charset="utf-8">
+    <title>Celular JS</title>
+</head>
+
+<body>
+
+    <div class="objeto_celular">
+
+        <div id="tela_config">
+
+            <div class="text">
+
+                <img src="imgs/icons/android.png" width="70px">
+                <h2>Bem vindo(a) ao S.O javaScript</h2>
+                <p>Agora vamos configurar o Smartphone</p>
+                <p class="tutorial">Cadastre uma senha abaixo</p>
+
+            </div>
+
+            <div id="box_infor">
+
+                <span id="erro"></span>
+                <p id="textTeclado"></p>
+
+
+            </div>
+
+            <div id="teclado1">
+
+                <button onclick="inserir('1')">1</button>
+                <button onclick="inserir('2')">2</button>
+                <button onclick="inserir('3')">3</button>
+                <button onclick="inserir('4')">4</button>
+                <button onclick="inserir('5')">5</button>
+                <button onclick="inserir('6')">6</button>
+                <button onclick="inserir('7')">7</button>
+                <button onclick="inserir('8')">8</button>
+                <button onclick="inserir('9')">9</button>
+                <button onclick="apagar()">X</button>
+                <button onclick="inserir('0')">0</button>
+                <button onclick="verificador1()">OK</button>
+                <button onclick="chamarTecladoLetras()"> > </button>
+
+            </div>
+
+            <div id="teclado2">
+
+                <button onclick="inserir2('q')">q </button>
+                <button onclick="inserir2('w')">w</button>
+                <button onclick="inserir2('e')">e</button>
+                <button onclick="inserir2('r')">r</button>
+                <button onclick="inserir2('t')"> t</button>
+                <button onclick="inserir2('y')">y</button>
+                <button onclick="inserir2('u')">u</button>
+                <button onclick="inserir2('i')">i</button>
+                <button onclick="inserir2('o')">o</button>
+                <button onclick="inserir2('p')">p</button>
+                <button onclick="inserir2('a')">a</button>
+                <button onclick="inserir2('s')">s</button>
+                <button onclick="inserir2('d')">d</button>
+                <button onclick="inserir2('f')">f</button>
+                <button onclick="inserir2('g')">g</button>
+                <button onclick="inserir2('h')">h</button>
+                <button onclick="inserir2('j')">j</button>
+                <button onclick="inserir2('k')">k</button>
+                <button onclick="inserir2('l')">l</button>
+                <button onclick="inserir2('z')">z</button>
+                <button onclick="inserir2('x')">x</button>
+                <button onclick="inserir2('c')">c</button>
+                <button onclick="inserir2('v')">v</button>
+                <button onclick="inserir2('b')">b</button>
+                <button onclick="inserir2('n')">n</button>
+                <button onclick="inserir2('m')">m</button>
+                <button onclick="verificador1()">OK</button>
+
+                <button onclick="apagar()">X</button>
+                <button onclick="chamarTecladoNumero()">< </button>
+            </div>
+        </div>
+
+        <div id="tela_bloqueio">
+
+            <div id="icons_primario">
+
+                <img src="imgs/icons/sinal.png" width="20px">
+                <img src="imgs/icons/wifi-gratis.png" width="20px">
+                <img src="imgs/icons/bateria-fraca.png" width="20px">
+
+            </div>
+
+            <div id="hora-data">
+
+                <p id = "PH"></p>
+                <span>Sab, Mar 26</span>
+
+            </div>
+
+            <div class="Input_senha">
+
+                <p id="erro2"></p>
+                <p id="senha2" class="senha1"></p><br>
+
+            </div>
+
+            <div id="teclado3">
+
+                <button onclick="inserirr('1')">1</button>
+                <button onclick="inserirr('2')">2</button>
+                <button onclick="inserirr('3')">3</button>
+                <button onclick="inserirr('4')">4</button>
+                <button onclick="inserirr('5')">5</button>
+                <button onclick="inserirr('6')">6</button>
+                <button onclick="inserirr('7')">7</button>
+                <button onclick="inserirr('8')">8</button>
+                <button onclick="inserirr('9')">9</button>
+                <button onclick="apagarr()">X</button>
+                <button onclick="inserirr('0')">0</button>
+                <button onclick="verificarSenhas()">OK</button>
+                <button onclick="chamarTecladoL()"> > </button>
+
+            </div>
+
+            <div id="teclado4">
+
+                <button onclick="inserir3('q')">q </button>
+                <button onclick="inserir3('w')">w</button>
+                <button onclick="inserir3('e')">e</button>
+                <button onclick="inserir3('r')">r</button>
+                <button onclick="inserir3('t')"> t</button>
+                <button onclick="inserir3('y')">y</button>
+                <button onclick="inserir3('u')">u</button>
+                <button onclick="inserir3('i')">i</button>
+                <button onclick="inserir3('o')">o</button>
+                <button onclick="inserir3('p')">p</button>
+                <button onclick="inserir3('a')">a</button>
+                <button onclick="inserir3('s')">s</button>
+                <button onclick="inserir3('d')">d</button>
+                <button onclick="inserir3('f')">f</button>
+                <button onclick="inserir3('g')">g</button>
+                <button onclick="inserir3('h')">h</button>
+                <button onclick="inserir3('j')">j</button>
+                <button onclick="inserir3('k')">k</button>
+                <button onclick="inserir3('l')">l</button>
+                <button onclick="inserir3('z')">z</button>
+                <button onclick="inserir3('x')">x</button>
+                <button onclick="inserir3('c')">c</button>
+                <button onclick="inserir3('v')">v</button>
+                <button onclick="inserir3('b')">b</button>
+                <button onclick="inserir3('n')">n</button>
+                <button onclick="inserir3('m')">m</button>
+                <button onclick="verificarSenhas()">OK</button>
+                <button onclick="apagarr()">X</button>
+                <button onclick="chamarTecladoN()"> < </button>
+
+            </div>
+
+        </div>
+
+        <div id="tela_inicial">
+
+            <div id="icons_primario">
+
+                <img src="imgs/icons/sinal.png" width="20px">
+                <img src="imgs/icons/wifi-gratis.png" width="20px">
+                <img src="imgs/icons/bateria-fraca.png" width="20px">
+                <p id = "PH"></p>
+
+            </div>
+
+            <div class="previsao1">
+
+                <img src="imgs/icons/nuvem-de-sol.png" width="33px">
+                <H1>27º</H1>
+
+            </div>
+
+            <div class="previsao2">
+
+                <img src="imgs/icons/pin.png" width="20px">
+                <P>Maraial-PE</P>
+
+            </div>
+
+            <div class="apps">
+
+                <img id="bt_config" src="imgs/icons/icons_apps/configuracao.png" width="45px">
+                <img id="bt_fone" src="imgs/icons/icons_apps/telefone.png" width="45px">
+                <img id="bt_googleMp" src="imgs/icons/icons_apps/google.png" width="45px">
+                <img id="bt_galeria" src="imgs/icons/icons_apps/galeria.png" width="45px">
+                <img id="bt_music" src="imgs/icons/icons_apps/musica.png" width="45px">
+                <img id="bt_calcula" src="imgs/icons/icons_apps/calculadora.png" width="45px">
+                <img id="bt_anota" src="imgs/icons/icons_apps/bloco-de-anotacoes.png" width="45px">
+                <img id="bt_videoG" src="imgs/icons/icons_apps/controle-de-video-game.png" width="45px">
+
+            </div>
+
+            <div class="icons_nav1">
+
+                <img id="circulo1" src="imgs/icons/contorno-do-circulo.png" width="25px">
+                <img id="retangulo1" src="imgs/icons/seta-esquerda.png" width="25px">
+
+            </div>
+
+        </div>
+
+        <div id="abrir_tela_Configuracoes">
+
+            <div id="icons_primario">
+
+                <img src="imgs/icons/sinal.png" width="20px">
+                <img src="imgs/icons/wifi-gratis.png" width="20px">
+                <img src="imgs/icons/bateria-fraca.png" width="20px">
+                <p id = "PH"></p>
+
+            </div>
+
+
+            <div class="conteudo">
+
+                <h2 class="h2"> Configurar</h2>
+
+                <nav>
+
+                    <ul id="lista_config">
+
+                        <li id="bt_subTela">Tela</li>
+                        <li id="bt_subTela_segu">Segurança</li>
+                        <li id="bt_subTela_bloqueio">Tela de bloqueio</li>
+                        <li id = "bt_bloqueiarTela">Bloqueiar Tela</li>
+                    </ul>
+
+                </nav>
+
+                <div class="icons_nav1">
+
+                    <img id="circulo2" src="imgs/icons/contorno-do-circulo.png" width="25px">
+                    <img id="retangulo2" src="imgs/icons/seta-esquerda.png" width="25px">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="tela">
+
+            <h2 class="h2">Tela</h2>
+
+            <div class="box1">
+
+                <h3 class="h3">Tamanho dos Icones</h3>
+                <label>Padrâo</label>
+                <input id = "bt_padrao_tela" type="radio" name="escolha" checked>
+                <label>Medio</label>
+                <input id = "bt_medio_tela" type="radio" name="escolha">
+                <label>Grande</label>
+                <input id = "bt_grande_tela" type="radio" name="escolha">
+
+            </div>
+
+            <div class="box2">
+
+                <h3 class="h3">Temas tela inicial</h3>
+
+                <div id="tema1"></div>
+                <div id="tema2"></div>
+
+            </div>
+
+            <div class="icons_nav6">
+
+                <img id = "circulo8" src="imgs/icons/contorno-do-circulo.png" width="25px">
+                <img id = "retangulo8" src="imgs/icons/seta-esquerda.png" width="25px">
+
+            </div>
+
+        </div>
+
+        <div id="tela_segurança">
+
+
+            <div id="icons_primario">
+
+                <img src="imgs/icons/sinal.png" width="20px">
+                <img src="imgs/icons/wifi-gratis.png" width="20px">
+                <img src="imgs/icons/bateria-fraca.png" width="20px">
+                <p id = "PH"></p>
+
+            </div>
+
+            <h2 class="h2">Segurança</h2>
+
+            <div class="box_conteudo">
+                <p>Seu dispositivo esta com uma senha configurada.</p>
+            </div>
+
+            <div class="icons_nav1">
+
+                <img id = "circulo9" src="imgs/icons/contorno-do-circulo.png" width="25px">
+                <img id = "retangulo9" src="imgs/icons/seta-esquerda.png" width="25px">
+
+            </div>
+
+        </div>
+
+        <div id="tela_bloqueio2">
+
+            <div id="icons_primario">
+
+                <img src="imgs/icons/sinal.png" width="20px">
+                <img src="imgs/icons/wifi-gratis.png" width="20px">
+                <img src="imgs/icons/bateria-fraca.png" width="20px">
+                <p id = "PH"></p>
+
+            </div>
+
+            <h2 class="h2">Tela de bloqueio</h2>
+
+            <h3 class="h3">Tamanho da fonte</h3>
+
+            <div class="box_bloque">
+
+                <label>Padrâo</label>
+                <input id = "bt_fontePadrao" type="radio" name="escolha2" checked>
+                <label>Medio</label>
+                <input id = "bt_fonteMedio" type="radio" name="escolha2">
+                <label>Grande</label>
+                <input id = "bt_fonteGrande" type="radio" name="escolha2">
+
+            </div>
+
+            <div class="box_bloque2">
+
+                <h3 class="h3">Temas tela de bloqueio</h3>
+
+                <div id="tema3"></div>
+                <div id="tema4"></div>
+
+            </div>
+
+            <div class="icons_nav6">
+
+                <img id = "circulo10" src="imgs/icons/contorno-do-circulo.png" width="25px">
+                <img id = "retangulo10" src="imgs/icons/seta-esquerda.png" width="25px">
+
+            </div>
+
+
+        </div>
+
+        <div id="tela_telefone">
+
+            <div id="icons_primario">
+
+                <img src="imgs/icons/sinal.png" width="20px">
+                <img src="imgs/icons/wifi-gratis.png" width="20px">
+                <img src="imgs/icons/bateria-fraca.png" width="20px">
+                <p id = "PH"></p>
+
+            </div>
+
+
+
+            <h2 class="h2">Contatos</h2>
+
+            <div id ="box_add_contatos">
+                <p>Adicione Seu contato</p>
+                <input id = "textNome" type="text" placeholder="Nome">
+                <input id = "textNumero" type="text" placeholder="Numero">
+                <input id = "salvar" type="button" value="Salvar">
+
+            </div>
+
+            <ul id="receberCTTs"></ul>
+
+            <div class="icons_nav1">
+
+                <img id="circulo3" src="imgs/icons/contorno-do-circulo.png" width="25px">
+                <img id="retangulo3" src="imgs/icons/seta-esquerda.png" width="25px">
+
+            </div>
+        </div>
+
+        <div id="tela_googleMaps">
+
+            <div id="icons_primario">
+
+                <img src="imgs/icons/sinal.png" width="20px">
+                <img src="imgs/icons/wifi-gratis.png" width="20px">
+                <img src="imgs/icons/bateria-fraca.png" width="20px">
+                <p id = "PH"></p>
+
+            </div>
+
+            <iframe src="https://google-map-generator.com">
+
+
+
+
+            </iframe>
+
+            <div class="icons_nav1">
+
+                <img id="circulo4" src="imgs/icons/contorno-do-circulo.png" width="25px">
+                <img id="retangulo4" src="imgs/icons/seta-esquerda.png" width="25px">
+
+            </div>
+
+
+        </div>
+
+
+        <div id="tela_Galeria">
+
+            <div id="icons_primario">
+
+                <img src="imgs/icons/sinal.png" width="20px">
+                <img src="imgs/icons/wifi-gratis.png" width="20px">
+                <img src="imgs/icons/bateria-fraca.png" width="20px">
+                <p id = "PH"></p>
+
+            </div>
+
+            <h3 class="h3">FOTOS</h3>
+
+            <div class="container-fotos">
+
+                <div class="img1">
+
+                    <img id = "btft1" src="imgs/albums/foto1.jpg">
+                </div>
+
+                <div class="img2">
+                    <img id = "btft2" src="imgs/albums/foto2.jpg">
+                </div>
+
+                <div class="img3">
+                    <img id = "btft3" src="imgs/albums/foto3.jpg">
+                </div>
+
+                <div class="img4">
+                    <img id = "btft4" src="imgs/albums/foto4.jpg">
+                </div>
+
+                <div class="img5">
+
+                    <img id = "btft5" src="imgs/albums/foto5.jpg">
+
+                </div>
+
+                <div class="img6">
+
+                    <img id = "btft6" src="imgs/albums/foto6.jpg">
+
+                </div>
+
+                <div class="img7">
+                    <img id = "btft7" src="imgs/albums/foto7.jpg">
+                </div>
+
+                <div class="img8">
+
+                    <img id = "btft8" src="imgs/albums/foto8.webp">
+
+                </div>
+
+                <div class="img9">
+
+                    <img id = "btft9" src="imgs/albums/foto9.jpg">
+
+                </div>
+
+            </div>
+
+            <div class="icons_nav1">
+
+                <img id="circulo5" src="imgs/icons/contorno-do-circulo.png" width="25px">
+                <img id="retangulo5" src="imgs/icons/seta-esquerda.png" width="25px">
+
+            </div>
+
+        </div>
+
+        <div id="img_aberta1"> <img src="imgs/albums/foto1.jpg" width="365px" height="650px">
+
+            <div class="seta">
+
+                <img id = "voltar_tela_galeria1" src="imgs/icons/de-volta.png" width="35px">
+
+            </div>
+
+            <div class="opcoes_fotos">
+
+                <ul id="botoes-fotos">
+                    <li id="lixeira1">Excluir</li>
+                    <li id="add1">Adicionar como plano de fundo</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div id="img_aberta2">
+
+            <img  src="imgs/albums/foto2.jpg" width="365px" height="650px">
+
+            <div class="seta">
+
+                <img id = "voltar_tela_galeria2" src="imgs/icons/de-volta.png" width="35px">
+
+            </div>
+
+            <div class="opcoes_fotos">
+
+                <ul id="botoes-fotos">
+                    <li id="lixeira2">Excluir</li>
+                    <li id="add2">Adicionar como plano de fundo</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div id="img_aberta3">
+
+            <img src="imgs/albums/foto3.jpg" width="360px" height="650px">
+
+            <div class="seta">
+
+                <img id = "voltar_tela_galeria3" src="imgs/icons/de-volta.png" width="35px">
+
+            </div>
+
+            <div class="opcoes_fotos">
+
+                <ul id="botoes-fotos">
+                    <li id="lixeira3">Excluir</li>
+                    <li id="add3">Adicionar como plano de fundo</li>
+
+                </ul>
+
+            </div>
+
+
+
+        </div>
+
+
+        <div id="img_aberta4">
+
+            <img src="imgs/albums/foto4.jpg" width="365px" height="650px">
+
+            <div class="seta">
+
+                <img id = "voltar_tela_galeria4" src="imgs/icons/de-volta.png" width="35px">
+
+            </div>
+
+            <div class="opcoes_fotos">
+
+                <ul id="botoes-fotos">
+                    <li id="lixeira4">Excluir</li>
+                    <li id="add4">Adicionar como plano de fundo</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div id="img_aberta5">
+
+            <img src="imgs/albums/foto5.jpg" width="365px" height="650px">
+
+            <div class="seta">
+
+                <img id = "voltar_tela_galeria5" src="imgs/icons/de-volta.png" width="35px">
+
+            </div>
+
+            <div class="opcoes_fotos">
+
+                <ul id="botoes-fotos">
+                    <li id="lixeira5">Excluir</li>
+                    <li id="add5">Adicionar como plano de fundo</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div id="img_aberta6">
+
+            <img  src="imgs/albums/foto6.jpg" width="365px" height="650px">
+
+            <div class="seta">
+
+                <img id = "voltar_tela_galeria6" src="imgs/icons/de-volta.png" width="35px">
+
+            </div>
+
+            <div class="opcoes_fotos">
+
+                <ul id="botoes-fotos">
+                    <li id="lixeira6">Excluir</li>
+                    <li id="add6">Adicionar como plano de fundo</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div id="img_aberta7">
+
+            <img src="imgs/albums/foto7.jpg" width="365px" height="650px">
+
+            <div class="seta">
+
+                <img id = "voltar_tela_galeria7" src="imgs/icons/de-volta.png" width="35px">
+
+            </div>
+
+            <div class="opcoes_fotos">
+
+                <ul id="botoes-fotos">
+                    <li id="lixeira7">Excluir</li>
+                    <li id="add7">Adicionar como plano de fundo</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div id="img_aberta8">
+
+            <img src="imgs/albums/foto8.webp" width="365px" height="650px">
+
+            <div class="seta">
+
+                <img id = "voltar_tela_galeria8" src="imgs/icons/de-volta.png" width="35px">
+
+            </div>
+
+            <div class="opcoes_fotos">
+
+                <ul id="botoes-fotos">
+                    <li id="lixeira8">Excluir</li>
+                    <li id="add8">Adicionar como plano de fundo</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div id="img_aberta9">
+
+            <img src="imgs/albums/foto9.jpg" width="365px" height="650px">
+
+            <div class="seta">
+
+                <img id = "voltar_tela_galeria9" src="imgs/icons/de-volta.png" width="35px">
+
+            </div>
+
+            <div class="opcoes_fotos">
+
+                <ul id="botoes-fotos">
+                    <li id="lixeira9">Excluir</li>
+                    <li id="add9">Adicionar como plano de fundo</li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+        <div id="tela_playerMusic">
+
+            <div id="icons_primario">
+
+                <img src="imgs/icons/sinal.png" width="20px">
+                <img src="imgs/icons/wifi-gratis.png" width="20px">
+                <img src="imgs/icons/bateria-fraca.png" width="20px">
+                <p id = "PH"></p>
+
+            </div>
+
+            <div id="container">
+
+                <div class="imagen">
+
+                    <img src="imgs/icons/ROCK.jpg">
+                </div>
+
+                <div class="descricao">
+
+                    <H2>Rock Guitar Hero</H2>
+
+                    <p class="artista">MP3 Player</p>
+
+                </div>
+
+                <div class="barra">
+
+                    <progress value="0" max="1"></progress>
+
+
+
+                    <ul>
+                        <li>
+                            <p class="inicio">0:00</p>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div id="controle">
+
+                    <img id = "voltar_musica" src="imgs/icons/previous.png">
+                    <img id= "botao-play" src="imgs/icons/botao-play.png">
+                    <img id= "botao-pause" src="imgs/icons/pausa.png">
+                    <img id = "passar_musica" src="imgs/icons/forward-button.png">
+
+                </div>
+
+                <div class="icons_nav6">
+
+                    <img id="circulo6" src="imgs/icons/contorno-do-circulo.png" width="25px">
+                    <img id="retangulo6" src="imgs/icons/seta-esquerda.png" width="25px">
+
+                </div>
+
+                <audio id = "audio1" src="audioplayer/X2Download.com - Lilly Wood & The Prick and Robin Schulz - Prayer In C (Robin Schulz Remix) (Official) (128 kbps).mp3"></audio>
+               
+            </div>
+
+        </div>
+
+        <div id="tela_calculadora">
+
+            <div id="icons_primario">
+
+                <img src="imgs/icons/sinal.png" width="20px">
+                <img src="imgs/icons/wifi-gratis.png" width="20px">
+                <img src="imgs/icons/bateria-fraca.png" width="20px">
+                <p id = "PH"></p>
+
+            </div>
+
+            <div class="calculadora">
+
+                <p id="texto"> </p>
+
+                <table>
+
+                    <tr>
+
+                        <td><button onclick="inserirC('7')"> 7</button></td>
+                        <td><button onclick="inserirC('8')">8</button></td>
+                        <td><button onclick="inserirC('9')"> 9 </button></td>
+                        <td><button onclick="inserirC('*')"> X</button></td>
+                        <td><button onclick="back()"> < </button>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><button onclick="inserirC('4')"> 4</button></td>
+                        <td><button onclick="inserirC('5')">5</button></td>
+                        <td><button onclick="inserirC('6')"> 6 </button></td>
+                        <td><button onclick="inserirC('-')"> -</button></td>
+                        <td><button onclick="limpar()">C</button></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><button onclick="inserirC('1')"> 1</button></td>
+                        <td><button onclick="inserirC('2')">2</button></td>
+                        <td><button onclick="inserirC('3')"> 3 </button></td>
+                        <td><button onclick="inserirC('+')""> +</button></td>
+        
+        
+                        </tr>
+        
+                        <tr>
+        
+                            <td><button onclick=" inserirC('/')"> /</button></td>
+                        <td><button onclick="inserirC('0')">0</button></td>
+                        <td><button onclick="inserirC('.')""> . </button></td>
+                            <td><button onclick=" calcular()"> =</button></td>
+                    </tr>
+
+                </table>
+
+                <div class="icons_nav1">
+
+                    <img id="circulo7" src="imgs/icons/contorno-do-circulo.png" width="25px">
+                    <img id="retangulo7" src="imgs/icons/seta-esquerda.png" width="25px">
+
+                </div>
+            </div>
+        </div>
+
+        <div id="tela_LOAD">
+
+            <div class="img">
+
+                <img src="imgs/icons/android.png" width="90px">
+
+            </div>
+
+            <div class="textA">
+
+                <p>Configurando seu Smartphone Aguarde...</p>
+                <P>Versâo do Sistema 1.0</P>
+
+            </div>
+            <div class="animaçao">  </div>
+        </div>
+    </div>
+    <script src="scripst/senhas.js"></script>
+    <script src="scripst/calculadora.js"></script>
+    <script src="scripst/playerMusic.js"></script>
+    <script src="scripst/teclados.js"></script>
+    <script src="scripst/subMenus.js"></script>
+    <script src="scripst/configGaleria.js"></script>
+</body>
+
+
+</html>
