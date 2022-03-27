@@ -1,6 +1,8 @@
 # Sistema-Operacional-Mobile-com-JavaScript
 Sistema operacional desenvolvido com javaScript em sua maior parte, o usuario podera alterar planos de fundo tanto da tela inicial como tambem da tela de bloqueio, escutar musicas com o app playerMusic, usar a calculadora aumentar o tamanho dos icones excluir imagens da sua galeria adcionar contatos em sua agenda e muito mais...
 
+link:https://glaudson-nunes.github.io/Sistema-Operacional-Mobile-com-JavaScript/
+
 ![01-37-59](https://user-images.githubusercontent.com/93484378/160266998-53ef06ad-51bb-4e84-bb7c-16efdb87da91.gif)
 
 ![tela_configuraçoes](https://user-images.githubusercontent.com/93484378/160267014-d04e528a-065d-4904-85ea-7dda2079746b.png)
